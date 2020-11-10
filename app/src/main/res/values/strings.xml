@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Desafio Dois</string>
+
+    <!-- Login text -->
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+
+</resources>
