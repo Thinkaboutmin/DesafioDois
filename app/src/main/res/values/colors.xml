@@ -8,5 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="text_input">#3a4cb0</color>
+    <color name="btn_register">#8291a5</color>
+    <color name="btn_login">#ff5456</color>
+    <color name="separator">#f7f8fa</color>
+
     <color name="navbar">#3a4cb0FF</color>
 </resources>

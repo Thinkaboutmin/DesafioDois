@@ -1,8 +1,20 @@
 <resources>
-    <string name="app_name">Desafio Dois</string>
+    <string name="app_name">Digital House Foods</string>
 
     <!-- Login text -->
     <string name="email_hint">Email</string>
     <string name="password_hint">Password</string>
+    <string name="nome_hint">Name</string>
+    <string name="password_repeat_hint">Repeate password</string>
+
+    <string name="register_section">Register</string>
+
+    <string name="title_restaurant_card">%1$s</string>
+    <string name="content_restaurant_card">%1$s\nFecha às %2$s</string>
+
+    <string name="text_login_btn">LOG IN</string>
+    <string name="text_divisor">OR</string>
+    <string name="text_register_btn">REGISTER</string>
+
 
 </resources>
