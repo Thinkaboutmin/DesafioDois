@@ -7,6 +7,7 @@ import android.widget.GridLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 
 class RestaurantAdapter(val list: ArrayList<Restaurant>, val listener: OnRestaurantClick) :
@@ -32,7 +33,7 @@ class RestaurantAdapter(val list: ArrayList<Restaurant>, val listener: OnRestaur
         img.setImageResource(list[position].repImg)
 
         if (position == itemCount - 1) {
-            val content = holder.restaurantCard.findViewById<CardView>(R.id.content)
+            val content = holder.restaurantCard.findViewById<ConstraintLayout>(R.id.content)
             val layout = (content.layoutParams as RecyclerView.LayoutParams)
             layout.bottomMargin = 30
         }
