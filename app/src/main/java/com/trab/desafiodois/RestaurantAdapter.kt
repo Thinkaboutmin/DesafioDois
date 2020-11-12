@@ -3,11 +3,13 @@ package com.trab.desafiodois
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.GridLayout
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
-class RestaurantAdapter(private val list: ArrayList<Restaurant>, val listener: OnRestaurantClick) :
+class RestaurantAdapter(val list: ArrayList<Restaurant>, val listener: OnRestaurantClick) :
     RecyclerView.Adapter<RestaurantAdapter.ViewHolder>() {
     lateinit var parent: ViewGroup
 
@@ -28,6 +30,12 @@ class RestaurantAdapter(private val list: ArrayList<Restaurant>, val listener: O
             list[position].address, list[position].closingTime)
         val img = holder.restaurantCard.findViewById<ImageView>(R.id.imgCard)
         img.setImageResource(list[position].repImg)
+
+        if (position == itemCount - 1) {
+            val content = holder.restaurantCard.findViewById<CardView>(R.id.content)
+            val layout = (content.layoutParams as RecyclerView.LayoutParams)
+            layout.bottomMargin = 30
+        }
     }
 
     override fun getItemCount(): Int = list.size
@@ -38,7 +46,6 @@ class RestaurantAdapter(private val list: ArrayList<Restaurant>, val listener: O
 
     inner class ViewHolder(val restaurantCard: View) : RecyclerView.ViewHolder(restaurantCard),
                     View.OnClickListener {
-
         init {
             itemView.setOnClickListener(this)
         }

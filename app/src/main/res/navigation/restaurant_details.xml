@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/restaurant_details"
+    app:startDestination="@id/list_restaurants">
+
+    <fragment
+        android:id="@+id/restaurant_dish"
+        android:label="Restaurant Dishes"
+        android:name="com.trab.desafiodois.RestaurantDetailsFragment"
+        tools:layout="@layout/fragment_detail_restaurant"
+        >
+        <argument
+            android:name="restaurant"
+            app:argType="com.trab.desafiodois.Restaurant"
+            />
+        <action
+            android:id="@+id/action_restaurant_dish_to_dishDetailsFragment"
+            app:destination="@id/dishDetailsFragment"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/list_restaurants"
+        android:name="com.trab.desafiodois.RestaurantListFragment"
+        android:label="RestaurantListFragment" >
+        <action
+            android:id="@+id/action_restaurantListFragment_to_restaurant_dish"
+            app:destination="@id/restaurant_dish"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dishDetailsFragment"
+        android:name="com.trab.desafiodois.DishDetailsFragment"
+        android:label="DishDetailsFragment">
+        <argument
+            android:name="dish"
+            app:argType="com.trab.desafiodois.Dish"
+            />
+    </fragment>
+</navigation>

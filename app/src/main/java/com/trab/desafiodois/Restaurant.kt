@@ -1,7 +1,9 @@
 package com.trab.desafiodois
 
+import java.io.Serializable
+
 data class Restaurant(val name: String, val address: String, val closingTime: String,
-                      val repImg: Int, val pratos: ArrayList<Dish>) {
+                      val repImg: Int, val dishes: ArrayList<Dish>) : Serializable {
 
     companion object {
         fun generateRestaurants() : ArrayList<Restaurant> {
@@ -34,7 +36,7 @@ data class Restaurant(val name: String, val address: String, val closingTime: St
             )
 
             val dishes = arrayListOf(
-                Dish.generateTemplate("Salada com molho Gengíbre"),
+                Dish.generateTemplate("Salada com molho Gengibre"),
                 Dish.generateTemplate("Algo muito delicioso"),
                 Dish.generateTemplate("Lasanha bolonhesa"),
                 Dish.generateTemplate("Sushi ao conhaque")

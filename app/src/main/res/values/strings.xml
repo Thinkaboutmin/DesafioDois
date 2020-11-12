@@ -12,6 +12,8 @@
     <string name="title_restaurant_card">%1$s</string>
     <string name="content_restaurant_card">%1$s\nFecha às %2$s</string>
 
+    <string name="restaurant_main_dishs">Pratos principais</string>
+
     <string name="text_login_btn">LOG IN</string>
     <string name="text_divisor">OR</string>
     <string name="text_register_btn">REGISTER</string>
